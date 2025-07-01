@@ -20,6 +20,7 @@ export const splashStyles = createStyleSheet(({ colors, device }) => ({
     },
     msgText: {
         textAlign: "center",
+
     },
     animatedContainer: {
         justifyContent: 'center',
