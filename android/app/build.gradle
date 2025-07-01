@@ -49,6 +49,9 @@ react {
     //
     //   The list of flags to pass to the Hermes compiler. By default is "-O", "-output-source-map"
     // hermesFlags = ["-O", "-output-source-map"]
+project.ext.vectoricons =[
+    iconFontNames: ['MaterialIcons-Regular.ttf', 'Entypo.ttf', 'EvilIcons.ttf', 'FontAwesome.ttf', 'Foundation.ttf', 'Ionicons.ttf', 'MaterialCommunityIcons.ttf', 'Octicons.ttf', 'SimpleLineIcons.ttf', 'Zocial.ttf']
+]
 
     /* Autolinking */
     autolinkLibrariesWithApp()
