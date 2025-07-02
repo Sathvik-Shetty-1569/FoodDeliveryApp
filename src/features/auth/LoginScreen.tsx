@@ -62,7 +62,7 @@ contentContainerStyle={styles.bottomContainer}
 >
 <CustomText
 fontFamily='Okra-Bold'
-variant='h2'
+variant='h4'
 style={styles.title}
 >
     India's upcoming #1 Food Delivery and Dining App</CustomText>

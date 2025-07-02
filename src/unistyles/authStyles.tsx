@@ -37,14 +37,14 @@ export const loginStyles = createStyleSheet(({ colors, device, border }) => ({
     },
     imageWrapper: {
   width: '100%',
-  height: device.height * 0.4,
+  height: device.height * 0.35,
   borderBottomEndRadius: 30,
   borderBottomStartRadius: 30,
   overflow: 'hidden', // this is key!
 },
     cover: {
         width: '100%',
-        height: device.height * 0.4,
+        height: device.height * 0.35,
         resizeMode: 'cover',
         borderBottomEndRadius: 30,
         borderBottomStartRadius: 30

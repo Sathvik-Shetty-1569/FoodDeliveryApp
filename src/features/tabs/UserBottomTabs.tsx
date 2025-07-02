@@ -5,12 +5,13 @@ import DeliveryScreen from '@features/delivery/DeliveryScreen';
 import Reorder from '@features/reorder/Reorder';
 import DiningScreen from '@features/dining/DiningScreen';
 import LiveScreen from '@features/live/LiveScreen';
+import CustomTabBar from './CustomTabBar';
 
 const Tab = createBottomTabNavigator();
 const UserBottomTabs : React.FC = () => {
   return (
   <Tab.Navigator 
-//   tabBar = {(props) => <CustomTabBar {...props}/>}
+  tabBar = {(props) => <CustomTabBar {...props}/>}
   screenOptions={{headerShown: false,
     tabBarHideOnKeyboard: true,
   }}
