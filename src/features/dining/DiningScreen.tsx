@@ -8,7 +8,7 @@ const DiningScreen = () => {
   return (
     <View style ={styles.container(false)}>
       <Image
-      source={require('@assets/images/coming_soon3.png')}
+      source={require('@assets/images/coming_soon.jpg')}
       style = {styles.emptyImage}
       />
     </View>

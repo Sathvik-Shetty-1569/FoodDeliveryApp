@@ -6,9 +6,9 @@ import { emptyStyles } from '@unistyles/emptyStyles';
 const LiveScreen = () => {
     const {styles} = useStyles(emptyStyles);
   return (
-    <View style ={styles.container(false)}>
+    <View style ={styles.container(true)}>
       <Image
-      source={require('@assets/images/coming_soon3.png')}
+      source={require('@assets/images/coming_soon2.jpg')}
       style = {styles.emptyImage}
       />
     </View>

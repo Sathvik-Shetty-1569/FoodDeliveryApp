@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Alert, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { FC } from 'react'
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs'
 import { useSharedState } from './SharedContext'
@@ -105,9 +105,22 @@ const indicatorStyle = useAnimatedStyle(() => {
             styles.slidingIndicator,
             indicatorStyle,
             {
-                backgroundColor : isLiveTabFocused ? '#fff' : isVegMode ? Colors.active: Colors.primary}
+                backgroundColor : isLiveTabFocused 
+                ? '#fff' : isVegMode 
+                ? Colors.active: Colors.primary}
         ]}
         />
+
+<TouchableOpacity
+        activeOpacity={0.9}
+        style = {styles.groceryLogoContainer}
+        onPress={() => {
+            Alert.alert('Mine Project')}}>
+<Image
+source={require('@assets/icons/grocery.png')}
+style = {styles.groceryLogo}
+/>
+        </TouchableOpacity>
     </Animated.View>
     </>
   )
