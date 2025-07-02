@@ -11,6 +11,7 @@ import DeliveryFocused from "@assets/tabicons/delivery_focused.png"
 import ReorderFocused from "@assets/tabicons/reorder_focused.png"
 import LiveFocused from "@assets/tabicons/live_focused.png"
 import DiningFocused from "@assets/tabicons/dining_focused.png"
+import { useAppSelector } from "@states/reduxHook";
 
 interface TabProps {
     name : string;
@@ -65,7 +66,7 @@ style = {styles}
 })
 
 const TabIconFocused : FC<TabProps> = memo(({name}) =>{
-    const isVegMode = true
+    const isVegMode = useAppSelector(state => state.user.isVegMode);
 
     return(
         <View style = {tabStyles}>
