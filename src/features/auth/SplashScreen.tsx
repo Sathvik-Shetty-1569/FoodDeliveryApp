@@ -1,13 +1,24 @@
 import { Image, Platform, StatusBar, StyleSheet, Text, View } from 'react-native'
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { useStyles } from 'react-native-unistyles'
 import { splashStyles } from '@unistyles/authStyles'
 import Animated, { FadeIn, FadeInDown, FadeOut } from 'react-native-reanimated'
 import CustomText from '@components/global/CustomText'
+import { resetAndNavigate } from '@utils/NavigationUtils'
 
 const SplashScreen:FC = () => {
 
     const {styles} = useStyles(splashStyles);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            resetAndNavigate('LoginScreen')
+        },3000)
+
+        return () => {
+            clearTimeout(timeoutId)
+        }
+    }, []);
   return (
     <View style = {styles.container}>
         <StatusBar hidden={Platform.OS !== 'ios'}/>

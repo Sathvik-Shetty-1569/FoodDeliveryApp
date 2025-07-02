@@ -53,6 +53,8 @@ project.ext.vectoricons =[
     iconFontNames: ['MaterialIcons-Regular.ttf', 'Entypo.ttf', 'EvilIcons.ttf', 'FontAwesome.ttf', 'Foundation.ttf', 'Ionicons.ttf', 'MaterialCommunityIcons.ttf', 'Octicons.ttf', 'SimpleLineIcons.ttf', 'Zocial.ttf']
 ]
 
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
     /* Autolinking */
     autolinkLibrariesWithApp()
 }

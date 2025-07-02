@@ -7,7 +7,7 @@ type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'h7'
 type PlatformType = 'ios' | 'android'
 
 interface CustomTextProps {
-    variant : Variant
+    variant? : Variant
     fontFamily?:
     "Okra-Bold" | "Okra-Regular" | "Okra-Black" | "Okra-Light" | "Okra-Medium" ;
     fontSize? : number

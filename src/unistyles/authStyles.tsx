@@ -33,7 +33,15 @@ export const loginStyles = createStyleSheet(({ colors, device, border }) => ({
     container: {
         flex: 1,
         backgroundColor: colors.background,
+        
     },
+    imageWrapper: {
+  width: '100%',
+  height: device.height * 0.4,
+  borderBottomEndRadius: 30,
+  borderBottomStartRadius: 30,
+  overflow: 'hidden', // this is key!
+},
     cover: {
         width: '100%',
         height: device.height * 0.4,
@@ -85,7 +93,7 @@ export const loginStyles = createStyleSheet(({ colors, device, border }) => ({
     },
     footer: {
         position: "absolute",
-        bottom: 26,
+        bottom: 50,
         alignSelf: 'center',
         width: '100%',
         justifyContent: 'center',
