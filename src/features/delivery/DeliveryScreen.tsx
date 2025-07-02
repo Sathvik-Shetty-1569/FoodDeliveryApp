@@ -7,6 +7,7 @@ import { useSharedState } from '@features/tabs/SharedContext'
 import Animated, { Extrapolate, interpolate, useAnimatedStyle } from 'react-native-reanimated'
 import Graphics from '@components/home/Graphics'
 import HeaderSection from '@components/home/HeaderSection'
+import MainList from '@components/list/MainList'
 
 const DeliveryScreen:FC = () => {
   const insets = useSafeAreaInsets()
@@ -46,7 +47,7 @@ const moveUpStyleNotExtrapolate= useAnimatedStyle(() => {
       </Animated.View>
 
 <Animated.View style = {moveUpStyle}>
-
+<MainList/>
 </Animated.View>
     </View>
   )
