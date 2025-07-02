@@ -23,16 +23,14 @@ const MainList:FC = () => {
     const prevScrollY = useRef(0)
     const sectionListRef = useRef<SectionList>(null);
 
-    const [isResturantVisible, setIsResturantVisible] = useState(false)
+    const [isRestaurantVisible, setIsRestaurantVisible] = useState(false)
     const [isNearEnd, setIsNearEnd] = useState(false);
 
     const handleScroll = (event:NativeSyntheticEvent<NativeScrollEvent>)=>{
         const currentScrollY = event?.nativeEvent?.contentOffset?.y;
         const isScrollingDown = currentScrollY > prevScrollY?.current;
 
-        scrollY.value = isScrollingDown 
-                        ? withTiming(1,{duration:300}) 
-                        : withTiming(0,{duration:300})
+        scrollY.value = isScrollingDown ? withTiming(1,{duration:300}) : withTiming(0,{duration:300})
 
         scrollYGlobal.value = currentScrollY;
         prevScrollY.current = currentScrollY;
@@ -40,12 +38,13 @@ const MainList:FC = () => {
         const containerHeight = event.nativeEvent.contentSize.height;
         const layoutHeight = event?.nativeEvent?.layoutMeasurement?.height;
         const offset = event?.nativeEvent?.contentOffset?.y;
-        setIsNearEnd(offset + layoutHeight >= containerHeight -500);
+
+        setIsNearEnd(offset + layoutHeight >= containerHeight - 500);
         
 
     }
 
-    const hadnleScrollToTop = () => {
+    const handleScrollToTop = () => {
         scrollToTop();
         sectionListRef.current?.scrollToLocation({
             animated: true,
@@ -60,11 +59,11 @@ const backToTopStyle = useAnimatedStyle(()=>{
     const isScrollingUp = scrollYGlobal?.value < previousScrollYTopButton.current &&
      scrollYGlobal.value > 180;
     const opacity = withTiming(
-        isScrollingUp && (isResturantVisible || isNearEnd) ? 1 : 0,
+        isScrollingUp && (isRestaurantVisible || isNearEnd) ? 1 : 0,
         {duration: 300},
     );
     const translateY = withTiming(
-        isScrollingUp && (isResturantVisible || isNearEnd) ? 0 : 10,
+        isScrollingUp && (isRestaurantVisible || isNearEnd) ? 0 : 10,
         {duration: 300},
     );
     previousScrollYTopButton.current = scrollYGlobal.value;
@@ -85,14 +84,14 @@ const onViewableItemsChanged = ({viewableItems,}:{
         const restuarantVisible = viewableItems.some(
             item=> item?.section?.title === 'Restaurants' && item?.isViewable,
         );
-        setIsResturantVisible(restuarantVisible);
+        setIsRestaurantVisible(restuarantVisible);
     };
     
 
     return (
     <>
     <Animated.View style = {[styles.backToTopButton, backToTopStyle ]}>
-        <BackToTopButton onPress={hadnleScrollToTop}/>
+        <BackToTopButton onPress={handleScrollToTop}/>
     </Animated.View>
     <SectionList
     overScrollMode='always'
@@ -115,7 +114,7 @@ const onViewableItemsChanged = ({viewableItems,}:{
         return (
             <Animated.View
             style={[
-                isResturantVisible || isNearEnd ? styles.shadowBottom: null,
+                isRestaurantVisible || isNearEnd ? styles.shadowBottom: null,
             ]}>
             <SortingAndFilters menuTitle="Sort" options = {filtersOption}/>
             </Animated.View>
