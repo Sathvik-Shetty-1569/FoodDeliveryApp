@@ -35,6 +35,16 @@ const RestuarantList = () => {
       scrollEventThrottle={16}
       keyExtractor={item => item?.id?.toString()}
       contentContainerStyle={styles.listContainer}
+      ListFooterComponent={()=>{
+        return(
+          <View style={{justifyContent:'center',alignItems:'center',}}>
+            <CustomText fontFamily='Okra-Medium' variant='h1'>
+              Made with ❤️
+            </CustomText>
+            <CustomText fontFamily='Okra-Medium' variant='h5'>By - Sathvik Shetty</CustomText>
+            </View>
+        )
+      }}
       />
     </View>
   )

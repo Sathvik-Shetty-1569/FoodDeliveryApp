@@ -1,11 +1,11 @@
-import { Animated, NativeScrollEvent, NativeSyntheticEvent, SectionList, StyleSheet, Text, View, ViewToken } from 'react-native'
+import { NativeScrollEvent, NativeSyntheticEvent, SectionList, StyleSheet, Text, View, ViewToken } from 'react-native'
 import React, { FC, useRef, useState } from 'react'
 import RestuarantList from '@components/list/RestuarantList';
 import Explorelist from '@components/list/Explorelist';
 import { restaurantStyles } from '@unistyles/restuarantStyles';
 import { useStyles } from 'react-native-unistyles';
 import { useSharedState } from '@features/tabs/SharedContext';
-import { useAnimatedStyle, withTiming } from 'react-native-reanimated';
+import Animated, { useAnimatedStyle, withTiming } from 'react-native-reanimated';
 import BackToTopButton from '@components/ui/BackToTopButton';
 import { filtersOption } from '@utils/dummyData';
 import SortingAndFilters from '@components/home/SortingAndFilters';
