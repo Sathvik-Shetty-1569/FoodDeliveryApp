@@ -37,7 +37,7 @@ const RestuarantList = () => {
       contentContainerStyle={styles.listContainer}
       ListFooterComponent={()=>{
         return(
-          <View style={{justifyContent:'center',alignItems:'center',}}>
+          <View style={{justifyContent:'center',alignItems:'center',opacity:0.4}}>
             <CustomText fontFamily='Okra-Medium' variant='h1'>
               Made with ❤️
             </CustomText>

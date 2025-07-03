@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, Text, View } from 'react-native'
+import { Platform, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React, { FC } from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { homeStyles } from '@unistyles/homeStyles'
@@ -8,6 +8,7 @@ import Animated, { Extrapolate, interpolate, useAnimatedStyle } from 'react-nati
 import Graphics from '@components/home/Graphics'
 import HeaderSection from '@components/home/HeaderSection'
 import MainList from '@components/list/MainList'
+import { Colors } from '@unistyles/Constants'
 
 const DeliveryScreen:FC = () => {
   const insets = useSafeAreaInsets()
@@ -35,11 +36,18 @@ const moveUpStyleNotExtrapolate= useAnimatedStyle(() => {
 })
   return (
     <View style = {styles.container}>
-      <View style = {{height: Platform.OS === 'android' ? insets.top : 0}}></View>
+       <StatusBar
+  translucent
+  backgroundColor="#FF6E35"
+/>
+
+<View style={{ height: insets.top-6}}/>
+           
       <Animated.View style = {moveUpStyle}>
 <Animated.View style = {moveUpStyleNotExtrapolate}>
 <Graphics/>
 </Animated.View>
+
 
 <Animated.View style = {[backgroundColorChanges, styles.topHeader]}>
   <HeaderSection/>
@@ -49,6 +57,7 @@ const moveUpStyleNotExtrapolate= useAnimatedStyle(() => {
 <Animated.View style = {moveUpStyle}>
 <MainList/>
 </Animated.View>
+
     </View>
   )
 }

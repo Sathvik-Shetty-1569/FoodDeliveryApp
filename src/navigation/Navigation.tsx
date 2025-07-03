@@ -7,6 +7,7 @@ import LoginScreen from '@features/auth/LoginScreen';
 import { navigationRef } from "@utils/NavigationUtils";
 import UserBottomTabs from "@features/tabs/UserBottomTabs";
 import AnimatedTabs from "@features/tabs/AnimatedTabs";
+import RestuarantScreen from "@features/restaurant/RestuarantScreen";
 
 const Stack = createNativeStackNavigator();
 const Navigation:FC = () => {
@@ -14,16 +15,15 @@ const Navigation:FC = () => {
     <NavigationContainer ref={navigationRef}>
 
         <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{headerShown: false}}>
-            <Stack.Screen name="SplashScreen" component={SplashScreen}
-            />
+            <Stack.Screen name="SplashScreen" component={SplashScreen}/>
             <Stack.Screen
             options={{animation: 'fade',}}
             name = "LoginScreen" component = {LoginScreen}/>
-
+            <Stack.Screen
+            name="RestuarantScreen" component={RestuarantScreen}/>
             <Stack.Screen
             options={{animation: 'fade'}}
             name = "UserBottomTab" component = {AnimatedTabs}/>
-            
         </Stack.Navigator>
     </NavigationContainer>
   )

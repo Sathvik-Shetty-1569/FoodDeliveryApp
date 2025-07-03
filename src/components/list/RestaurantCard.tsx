@@ -17,6 +17,7 @@ const RestaurantCard:FC<{item: any}> = ({item}) => {
     }}
     >
 <View style={styles.card}>
+<View>
 <Image
 source={{uri: item?.imageUrl}}
 style={styles.image}
@@ -48,6 +49,7 @@ style={styles.image}
             {item?.discountAmount &&  `* ${item?.discountAmount}`}
         </CustomText>
     )}
+</View>
 </View>
     </ScalePress>
   )

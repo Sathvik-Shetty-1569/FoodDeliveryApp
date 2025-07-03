@@ -18,8 +18,8 @@ const LocationHeader:FC = () => {
         }
     })
   return (
+    <View style = {{marginTop: 20}}>
     <Animated.View style = {opacityFadingStyles}>
-        <SafeAreaView/>
         <View style ={styles.flexRowBetween}>
 <View style={styles.flexRowGap}>
 <Icon
@@ -68,6 +68,7 @@ Enrangel, Pochinki
 </View>
         </View>
         </Animated.View>
+        </View>
   )
 }
 

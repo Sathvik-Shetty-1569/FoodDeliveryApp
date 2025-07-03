@@ -6,7 +6,6 @@ import { Platform } from "react-native";
 export const homeStyles = createStyleSheet(({ colors, device, border }) => ({
     container: {
         flex: 1,
-        backgroundColor: colors.background
     },
     topHidingContainer: {
         marginTop: isBannerHeight,

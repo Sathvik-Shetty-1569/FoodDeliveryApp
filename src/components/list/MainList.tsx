@@ -97,7 +97,7 @@ const onViewableItemsChanged = ({viewableItems,}:{
     overScrollMode='always'
     onScroll={handleScroll}
     ref={sectionListRef}
-    scrollEventThrottle={16}
+    scrollEventThrottle={10}
     bounces={false}
     sections={sectionedData}
     nestedScrollEnabled
