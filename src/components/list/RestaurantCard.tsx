@@ -9,6 +9,7 @@ import StarRating from '@components/ui/StartRating'
 import DottedLine from '@components/ui/DottedLine'
 
 const RestaurantCard:FC<{item: any}> = ({item}) => {
+    console.log(item)
     const {styles} = useStyles(restaurantStyles);
   return (
     <ScalePress
