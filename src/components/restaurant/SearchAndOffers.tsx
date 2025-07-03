@@ -1,4 +1,4 @@
-import { Animated, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Animated, Platform, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { FC, memo, useEffect, useMemo, useRef, useState } from 'react'
 import { useStyles } from 'react-native-unistyles'
 import { searchStyles } from '@unistyles/restuarantStyles'
@@ -10,6 +10,9 @@ import { RFValue } from 'react-native-responsive-fontsize'
 import RollingBar from 'react-native-rolling-bar'
 import CustomText from '@components/global/CustomText'
 import LinearGradient from 'react-native-linear-gradient'
+import LottieView from 'lottie-react-native'
+import { navigate } from '@utils/NavigationUtils'
+import AnimatedNumber from 'react-native-animated-numbers'
 
 const searchItems : string[] = [
     'Search "chai samosa"',
@@ -88,7 +91,7 @@ const translateY = slideAnim.interpolate({
 
         
   return (
-    <View style={[styles.container, {marginVertical:10}]}>
+    <View style={[styles.container]}>
         <SafeAreaView/>
         <View style ={[styles.flexRowBetween, styles.padding]}>
             <TouchableOpacity
@@ -139,11 +142,64 @@ const translateY = slideAnim.interpolate({
         {showOffer && (
             <Animated.View style={{transform:[{translateY}]}}>
                 <LinearGradient
-                colors={showConfetti ? ['#3a7bd5','3a6073',]:['#e9425e','#9145b6']}
+                colors={showConfetti ? ['#3a7bd5','#3a6073',]:['#e9425e','#9145b6']}
                 start={{x:1, y:0}}
                 end={{x:1,y:1.2}}
                 style={styles.offerContainer}
                 >
+                    <View
+                    style={{
+                        padding:15,
+                        paddingBottom: 15,
+                        paddingHorizontal:20,
+                    }}
+                    >
+                        {showConfetti && (
+                            <LottieView
+                            source={require('@assets/animations/confetti_2.json')}
+                            style={styles.confetti}
+                            autoPlay
+                            loop={false}
+                            onAnimationFinish={() => setShowConfetti(false)}
+                            
+                            />
+                        )}
+                       <TouchableOpacity
+                       style={styles.offerContent}
+                       activeOpacity={0.8}
+                       onPress={() => {navigate('CheckoutScreen', {
+                        item:item,
+                       })}}
+                       >
+                        <AnimatedNumber
+                        includeComma={false}
+                        animationDuration={300}
+                        animateToNumber={summary?.totalItems}
+                        fontStyle={styles.animatedCount}
+                        />
+                        <CustomText
+                        style={styles.offerText}
+                        >{` item${summary?.totalItems > 1 ? 's' : ''} added`}</CustomText>
+                        <Icon
+                        iconFamily='MaterialCommunityIcons'
+                        name="arrow-right-circle"
+                        color='#fff'
+                        size={RFValue(20)}
+                        />
+                       </TouchableOpacity>
+                       <Animated.Text
+                       style={[styles.offerSubtitle,
+                        {
+                            transform:[{scale:scaleAnim}],
+                        },
+                       ]}>
+                       {summary?.totalPrice>500 ? 'Congratulations! You get an extra 15% OFF!'
+                        : `Add items worth ₹${Math.max(1,500 - summary?.totalPrice,)}more to get extra 15% OFF`
+                        }
+
+                       </Animated.Text>
+
+                    </View>
 
                 </LinearGradient>
                 </Animated.View>
