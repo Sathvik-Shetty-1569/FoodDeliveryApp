@@ -93,7 +93,7 @@ const translateY = slideAnim.interpolate({
   return (
     <View style={[styles.container]}>
         <SafeAreaView/>
-        <View style ={[styles.flexRowBetween, styles.padding]}>
+        <View style ={[styles.flexRowBetween, styles.padding, ]}>
             <TouchableOpacity
             style={styles.searchInputContainer}
             activeOpacity={0.8}
@@ -123,7 +123,7 @@ const translateY = slideAnim.interpolate({
                 </RollingBar>
             </TouchableOpacity>
 
-            <TouchableOpacity style ={styles.flexRowGap}>
+            <TouchableOpacity style ={[styles.flexRowGap,]} >
                 <Icon
                 iconFamily='MaterialCommunityIcons'
                 name="silverware-fork-knife"
@@ -145,7 +145,7 @@ const translateY = slideAnim.interpolate({
                 colors={showConfetti ? ['#3a7bd5','#3a6073',]:['#e9425e','#9145b6']}
                 start={{x:1, y:0}}
                 end={{x:1,y:1.2}}
-                style={styles.offerContainer}
+                style={[styles.offerContainer,{marginBottom:-25, paddingVertical:11}]}
                 >
                     <View
                     style={{
