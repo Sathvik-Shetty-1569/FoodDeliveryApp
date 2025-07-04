@@ -14,7 +14,7 @@ const RestaurantCard:FC<{item: any}> = ({item}) => {
   return (
     <ScalePress
     onPress={() =>{
-        navigate('RestuarantScreen', {item:item})
+        navigate('RestaurantScreen', {item:item})
     }}
     >
 <View style={styles.card}>

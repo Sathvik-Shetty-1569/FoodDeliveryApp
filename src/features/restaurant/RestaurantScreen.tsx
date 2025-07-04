@@ -13,7 +13,7 @@ import DottedLine from '@components/ui/DottedLine';
 import FoodCard from '@components/restaurant/FoodCard';
 import SearchAndOffers from '@components/restaurant/SearchAndOffers';
 
-const RestuarantScreen:FC = () => {
+const RestaurantScreen:FC = () => {
   const route = useRoute() as any;
   const restaurant = route?.params?.item;
   const {styles} = useStyles(restaurantHeaderStyles);
@@ -52,6 +52,6 @@ const RestuarantScreen:FC = () => {
   )
 }
 
-export default RestuarantScreen
+export default RestaurantScreen
 
 const styles = StyleSheet.create({})

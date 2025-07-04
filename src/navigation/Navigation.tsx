@@ -7,8 +7,9 @@ import LoginScreen from '@features/auth/LoginScreen';
 import { navigationRef } from "@utils/NavigationUtils";
 import UserBottomTabs from "@features/tabs/UserBottomTabs";
 import AnimatedTabs from "@features/tabs/AnimatedTabs";
-import RestuarantScreen from "@features/restaurant/RestuarantScreen";
+import RestaurantScreen from "@features/restaurant/RestaurantScreen";
 import CheckoutScreen from "@features/checkout/CheckoutScreen";
+import OrderSuccessScreen from "@features/checkout/OrderSuccessScreen";
 
 const Stack = createNativeStackNavigator();
 const Navigation:FC = () => {
@@ -21,11 +22,12 @@ const Navigation:FC = () => {
             options={{animation: 'fade',}}
             name = "LoginScreen" component = {LoginScreen}/>
             <Stack.Screen
-            name="RestuarantScreen" component={RestuarantScreen}/>
+            name="RestaurantScreen" component={RestaurantScreen}/>
             <Stack.Screen
             options={{animation: 'fade'}}
             name = "UserBottomTab" component = {AnimatedTabs}/>
             <Stack.Screen name="CheckoutScreen" component={CheckoutScreen}/>
+            <Stack.Screen name="OrderSuccessScreen" component={OrderSuccessScreen}/>
         </Stack.Navigator>
     </NavigationContainer>
   )

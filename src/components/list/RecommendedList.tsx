@@ -16,7 +16,7 @@ const RecommendedList = () => {
         return(
             <ScalePress
             style ={styles.itemContainer}
-            onPress = {()=> {navigate('RestuarantScreen',{
+            onPress = {()=> {navigate('RestaurantScreen',{
 item:item,
             })
         }}>
