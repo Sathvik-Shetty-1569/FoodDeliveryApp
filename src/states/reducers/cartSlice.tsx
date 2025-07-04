@@ -334,6 +334,10 @@ else{
                     restaurantCart => (restaurantCart ? [...restaurantCart.items] : []),
 
                  );
+            export const selectAllCartItems = createSelector(
+                (state: RootState) => state.cart.carts,
+                carts => carts.flatMap(cart => cart.items),
+            );
                  export const selectRestaurantCartItem=(
                     restaurantId : string,
                     itemId: string

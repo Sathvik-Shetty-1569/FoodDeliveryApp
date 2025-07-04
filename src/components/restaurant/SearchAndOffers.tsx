@@ -3,7 +3,7 @@ import React, { FC, memo, useEffect, useMemo, useRef, useState } from 'react'
 import { useStyles } from 'react-native-unistyles'
 import { searchStyles } from '@unistyles/restuarantStyles'
 import { useAppSelector } from '@states/reduxHook'
-import { selectRestaurantCart } from '@states/reducers/cartSlice'
+import { selectAllCartItems } from '@states/reducers/cartSlice'
 import Icon from '@components/global/Icon'
 import { Colors } from '@unistyles/Constants'
 import { RFValue } from 'react-native-responsive-fontsize'
@@ -23,7 +23,7 @@ const searchItems : string[] = [
 ]
 const SearchAndOffers:FC<{item:any}> = ({item}) => {
     const {styles} = useStyles(searchStyles);
-    const cart = useAppSelector(selectRestaurantCart(item?.id));
+    const cart = useAppSelector(selectAllCartItems);
     const summary = useMemo(()=>{
         return cart.reduce(
 (acc,item)=>{

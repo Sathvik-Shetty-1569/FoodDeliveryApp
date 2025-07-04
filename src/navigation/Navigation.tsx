@@ -8,6 +8,7 @@ import { navigationRef } from "@utils/NavigationUtils";
 import UserBottomTabs from "@features/tabs/UserBottomTabs";
 import AnimatedTabs from "@features/tabs/AnimatedTabs";
 import RestuarantScreen from "@features/restaurant/RestuarantScreen";
+import CheckoutScreen from "@features/checkout/CheckoutScreen";
 
 const Stack = createNativeStackNavigator();
 const Navigation:FC = () => {
@@ -24,6 +25,7 @@ const Navigation:FC = () => {
             <Stack.Screen
             options={{animation: 'fade'}}
             name = "UserBottomTab" component = {AnimatedTabs}/>
+            <Stack.Screen name="CheckoutScreen" component={CheckoutScreen}/>
         </Stack.Navigator>
     </NavigationContainer>
   )
