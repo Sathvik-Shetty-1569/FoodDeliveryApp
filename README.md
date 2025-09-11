@@ -1,97 +1,231 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<div align="center">
+  <h1>🍕 Food Delivery App</h1>
+  <p>A modern, feature-rich food delivery application built with React Native</p>
+  
+  <div>
+    <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
+    <img src="https://img.shields.io/badge/React_Navigation-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Navigation" />
+  </div>
 
-# Getting Started
+  <br />
+  
+  <!-- Add screenshots here when available -->
+  <p><em>🚧 Screenshots coming soon! 🚧</em></p>
+</div>
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## ✨ Features
 
-## Step 1: Start Metro
+🎯 **Core Features:**
+- 🏠 **Home Screen** - Browse featured restaurants and cuisines
+- 🏪 **Restaurant Details** - Detailed restaurant information and menu
+- 🛒 **Cart Management** - Add, remove, and modify cart items
+- 💳 **Checkout Process** - Seamless order placement and payment
+- 📱 **Authentication** - User login and registration
+- 🚚 **Live Tracking** - Real-time order tracking
+- 🔄 **Reorder** - Quick reordering from order history
+- 🍽️ **Dining Options** - Delivery and dine-in options
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+🎨 **UI/UX Features:**
+- 🌟 **Smooth Animations** - Lottie animations and Reanimated
+- 📱 **Responsive Design** - Optimized for all screen sizes
+- 🎭 **Modern UI** - Beautiful gradients and blur effects
+- 🔧 **Custom Components** - Reusable UI components
+- 📊 **Loading States** - Engaging loading animations
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 🛠️ Tech Stack
 
-```sh
-# Using npm
-npm start
+### 📱 **Frontend**
+- **React Native** `0.78.0` - Cross-platform mobile development
+- **TypeScript** `5.0.4` - Type-safe JavaScript
+- **React Navigation** `7.x` - Navigation library
+- **React Native Unistyles** - Styling solution
 
-# OR using Yarn
-yarn start
+### 🗄️ **State Management**
+- **Redux Toolkit** `2.6.1` - State management
+- **Redux Persist** `6.0.0` - Persistent state
+- **React Redux** `9.2.0` - React bindings for Redux
+- **MMKV** `3.2.0` - Fast key-value storage
+
+### 🎨 **UI & Animation**
+- **Lottie React Native** `7.2.2` - Beautiful animations
+- **React Native Reanimated** `3.17.1` - Smooth animations
+- **React Native Animated Numbers** `0.6.3` - Number animations
+- **React Native Linear Gradient** `2.8.3` - Gradient backgrounds
+- **React Native Blur** `4.4.1` - Blur effects
+- **React Native Vector Icons** `10.2.0` - Icon library
+- **React Native SVG** `15.11.2` - SVG support
+
+### 🔧 **Utilities**
+- **Axios** `1.8.3` - HTTP client
+- **React Native Gesture Handler** `2.24.0` - Touch gestures
+- **React Native Safe Area Context** `5.3.0` - Safe area handling
+- **UUID** `11.1.0` - Unique identifiers
+
+## 📁 Project Structure
+
+```
+📦 FoodDelivery/
+├── 📂 src/
+│   ├── 📂 assets/          # Images, fonts, animations
+│   │   ├── 📂 animations/  # Lottie animations
+│   │   ├── 📂 fonts/       # Custom fonts
+│   │   ├── 📂 icons/       # App icons
+│   │   ├── 📂 images/      # Static images
+│   │   └── 📂 tabicons/    # Tab navigation icons
+│   ├── 📂 components/      # Reusable components
+│   │   ├── 📂 checkout/    # Checkout components
+│   │   ├── 📂 global/      # Global components
+│   │   ├── 📂 home/        # Home screen components
+│   │   ├── 📂 list/        # List components
+│   │   ├── 📂 model/       # Modal components
+│   │   ├── 📂 restaurant/  # Restaurant components
+│   │   └── 📂 ui/          # UI components
+│   ├── 📂 features/        # Feature modules
+│   │   ├── 📂 auth/        # Authentication
+│   │   ├── 📂 checkout/    # Checkout process
+│   │   ├── 📂 delivery/    # Delivery tracking
+│   │   ├── 📂 dining/      # Dining options
+│   │   ├── 📂 live/        # Live tracking
+│   │   ├── 📂 reorder/     # Reorder functionality
+│   │   ├── 📂 restaurant/  # Restaurant features
+│   │   └── 📂 tabs/        # Tab navigation
+│   ├── 📂 navigation/      # Navigation configuration
+│   ├── 📂 states/          # Redux store & reducers
+│   │   └── 📂 reducers/    # Redux reducers
+│   ├── 📂 types/           # TypeScript definitions
+│   ├── 📂 unistyles/       # Styling configurations
+│   └── 📂 utils/           # Utility functions
+├── 📂 android/             # Android specific code
+├── 📂 ios/                 # iOS specific code
+└── 📄 App.tsx              # Root component
 ```
 
-## Step 2: Build and run your app
+## 🚀 Getting Started
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### 📋 Prerequisites
 
-### Android
+Before running this project, make sure you have:
 
-```sh
-# Using npm
-npm run android
+- ✅ [Node.js](https://nodejs.org/) (>= 18.0.0)
+- ✅ [React Native CLI](https://reactnative.dev/docs/environment-setup)
+- ✅ [Android Studio](https://developer.android.com/studio) (for Android development)
+- ✅ [Xcode](https://developer.apple.com/xcode/) (for iOS development, macOS only)
+- ✅ [JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 
-# OR using Yarn
-yarn android
+### 🔧 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd FoodDelivery
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **iOS Setup** (macOS only)
+   ```bash
+   # Install CocoaPods
+   bundle install
+   
+   # Install iOS dependencies
+   cd ios && bundle exec pod install && cd ..
+   ```
+
+### ▶️ Running the App
+
+1. **Start Metro bundler**
+   ```bash
+   npm start
+   ```
+
+2. **Run on Android**
+   ```bash
+   npm run android
+   ```
+
+3. **Run on iOS** (macOS only)
+   ```bash
+   npm run ios
+   ```
+
+### 📦 Building for Production
+
+**Android APK:**
+```bash
+npm run generate-apk
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+**iOS Archive:**
+```bash
+# Open in Xcode and archive
+open ios/FoodDelivery.xcworkspace
 ```
 
-Then, and every time you update your native dependencies, run:
+## 🧪 Testing
 
-```sh
-bundle exec pod install
+Run the test suite:
+```bash
+npm test
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+Run linting:
+```bash
+npm run lint
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 🎯 Development
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### 🔄 Hot Reload
+The app supports Fast Refresh. Save your changes and see them instantly!
 
-## Step 3: Modify your app
+### 🐛 Debugging
+- **Android**: Shake device or `Ctrl/Cmd + M` → Debug
+- **iOS**: Shake device or `Cmd + D` → Debug
+- **Flipper**: Advanced debugging with network inspector
 
-Now that you have successfully run the app, let's make changes!
+## 📱 Supported Platforms
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+| Platform | Support | Version |
+|----------|---------|----------|
+| 🤖 Android | ✅ | API 21+ |
+| 🍎 iOS | ✅ | iOS 12+ |
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 🤝 Contributing
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+We welcome contributions! Here's how you can help:
 
-## Congratulations! :tada:
+1. 🍴 Fork the repository
+2. 🌿 Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. ✅ Commit your changes (`git commit -m 'Add amazing feature'`)
+4. 📤 Push to the branch (`git push origin feature/amazing-feature`)
+5. 🎯 Open a Pull Request
 
-You've successfully run and modified your React Native App. :partying_face:
+## 📄 License
 
-### Now what?
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 🙏 Acknowledgments
 
-# Troubleshooting
+- Built with ❤️ using React Native
+- Icons by [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- Animations by [Lottie](https://lottiefiles.com/)
+- UI inspiration from modern food delivery apps
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 📞 Support
 
-# Learn More
+If you have any questions or need help, feel free to:
+- 🐛 [Open an issue](../../issues)
+- 💬 Start a discussion
+- 📧 Contact the maintainers
 
-To learn more about React Native, take a look at the following resources:
+---
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+<div align="center">
+  <p>Made with ❤️ for food lovers everywhere</p>
+  <p>⭐ Star this repo if you like it!</p>
+</div>
