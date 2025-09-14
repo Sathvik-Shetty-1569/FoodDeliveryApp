@@ -8,18 +8,50 @@
     <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
     <img src="https://img.shields.io/badge/React_Navigation-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Navigation" />
   </div>
-
+</div>
   <br />
   
 <!-- Screenshots -->
-  <h3>📸 App Screenshots</h3>
-  <p>Take a look at some of the app screens:</p>
- <div>
-    <img src="./screenshots/IMG-20250914-WA0001.jpg" alt="Login Screen" width="250" />
-    <img src="./screenshots/IMG-20250914-WA0002.jpg" alt="Home Screen" width="250" />
-    <img src="./screenshots/IMG-20250914-WA0003.jpg" alt="Restaurant Menu" width="250" />
-    <img src="./screenshots/IMG-20250914-WA0004.jpg" alt="Customisation Screen" width="250" />
-    <img src="./screenshots/IMG-20250914-WA0005.jpg" alt="Cart Screen" width="250" />
+ <div align="center">
+  <h1>🍕 Food Delivery App</h1>
+  <p>A modern, feature-rich food delivery application built with React Native</p>
+  
+  <div>
+    <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
+    <img src="https://img.shields.io/badge/React_Navigation-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Navigation" />
+  </div>
+
+  <br />
+  
+  <!-- Screenshots -->
+  <h2>📸 App Screenshots</h2>
+  <p>Here’s a glimpse of the app in action 👇</p>
+  
+  <div align="center">
+    <table>
+      <tr>
+        <td><img src="./Screenshots/IMG-20250914-WA0001.jpg" alt="Login Screen" width="220" /></td>
+        <td><img src="./Screenshots/IMG-20250914-WA0002.jpg" alt="Home Screen" width="220" /></td>
+        <td><img src="./Screenshots/IMG-20250914-WA0003.jpg" alt="Restaurant Menu" width="220" /></td>
+      </tr>
+      <tr>
+        <td align="center"><b>🔐 Login</b></td>
+        <td align="center"><b>🏠 Home</b></td>
+        <td align="center"><b>🍽️ Menu</b></td>
+      </tr>
+      <tr>
+        <td><img src="./Screenshots/IMG-20250914-WA0004.jpg" alt="Customisation Screen" width="220" /></td>
+        <td><img src="./Screenshots/IMG-20250914-WA0005.jpg" alt="Cart Screen" width="220" /></td>
+        <td><img src="./Screenshots/IMG-20250914-WA0002.jpg" alt="Checkout Screen" width="220" /></td>
+      </tr>
+      <tr>
+        <td align="center"><b>⚙️ Customisation</b></td>
+        <td align="center"><b>🛒 Cart</b></td>
+        <td align="center"><b>💳 Checkout</b></td>
+      </tr>
+    </table>
   </div>
 </div>
   
