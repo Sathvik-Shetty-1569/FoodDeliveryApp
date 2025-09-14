@@ -11,10 +11,18 @@
 
   <br />
   
-  <!-- Add screenshots here when available -->
-  <p><em>🚧 Screenshots coming soon! 🚧</em></p>
+<!-- Screenshots -->
+  <h3>📸 App Screenshots</h3>
+  <p>Take a look at some of the app screens:</p>
+ <div>
+    <img src="./screenshots/IMG-20250914-WA0001.jpg" alt="Login Screen" width="250" />
+    <img src="./screenshots/IMG-20250914-WA0002.jpg" alt="Home Screen" width="250" />
+    <img src="./screenshots/IMG-20250914-WA0003.jpg" alt="Restaurant Menu" width="250" />
+    <img src="./screenshots/IMG-20250914-WA0004.jpg" alt="Customisation Screen" width="250" />
+    <img src="./screenshots/IMG-20250914-WA0005.jpg" alt="Cart Screen" width="250" />
+  </div>
 </div>
-
+  
 ## ✨ Features
 
 🎯 **Core Features:**
