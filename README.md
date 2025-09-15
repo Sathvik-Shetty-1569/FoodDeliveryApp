@@ -21,7 +21,7 @@
     <table>
       <tr>
         <td><img src="./Screenshots/IMG-20250914-WA0001.jpg" alt="Login Screen" width="220" /></td>
-        <td><img src="./Screenshots/IMG-20250914-WA0002.jpg" alt="Home Screen" width="220" /></td>
+        <td><img src="./Screenshots/WhatsApp Video 2025-09-15 at 21.37.52_62a624f3.gif" alt="Home Screen" width="220" /></td>
         <td><img src="./Screenshots/IMG-20250914-WA0003.jpg" alt="Restaurant Menu" width="220" /></td>
       </tr>
       <tr>
@@ -32,7 +32,7 @@
       <tr>
         <td><img src="./Screenshots/IMG-20250914-WA0004.jpg" alt="Customisation Screen" width="220" /></td>
         <td><img src="./Screenshots/IMG-20250914-WA0005.jpg" alt="Cart Screen" width="220" /></td>
-        <td><img src="./Screenshots/IMG-20250914-WA0002.jpg" alt="Checkout Screen" width="220" /></td>
+        <td><img src="./Screenshots/WhatsApp Video 2025-09-15 at 21.54.04_77e442e7.gif" alt="Splash Screen" width="220" /></td>
       </tr>
       <tr>
         <td align="center"><b>⚙️ Customisation</b></td>
