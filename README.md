@@ -11,19 +11,7 @@
 </div>
   <br />
   
-<!-- Screenshots -->
- <div align="center">
-  <h1>🍕 Food Delivery App</h1>
-  <p>A modern, feature-rich food delivery application built with React Native</p>
-  
-  <div>
-    <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
-    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
-    <img src="https://img.shields.io/badge/React_Navigation-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Navigation" />
-  </div>
 
-  <br />
   
   <!-- Screenshots -->
   <h2>📸 App Screenshots</h2>
