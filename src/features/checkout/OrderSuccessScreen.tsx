@@ -6,13 +6,29 @@ import { useRoute } from '@react-navigation/native';
 import { clearRestaurantCart } from '@states/reducers/cartSlice';
 import { Colors, Fonts, screenWidth } from '@unistyles/Constants';
 import CustomText from '@components/global/CustomText';
+import { useAppDispatch } from '@states/reduxHook';
 
 
 const OrderSuccess:FC = () => {
   const route = useRoute() as any
-  const dispatch = route?.params?.restaurant;
+  const dispatch = useAppDispatch();
   const restaurant = route?.params?.restaurant;
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      replace('UserBottomTab');
+      dispatch(clearRestaurantCart({restaurant_id: restaurant?.id}))
+
+    },2300);
+    return () => clearTimeout(timeoutId);
+  },[])
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      replace('LiveTracking')
+    }, 2300);
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   return (
     <View style={styles.container} >

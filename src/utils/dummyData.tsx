@@ -1,7 +1,7 @@
 export const recommendedListData = [
     {
         "id": 1,
-        "name": "Punjabi Dhaba - Ali...",
+        "name": "Samrudhi Restaurant",
         "discount": "40% OFF",
         "discountAmount": "up to ₹80",
         "time": "25 mins",
@@ -184,10 +184,10 @@ export const regularFoodData = [
 export const restaurantItemsData = [
     {
         "id": "1",
-        "name": "Margherita Pizza",
-        "description": "Classic pizza with fresh mozzarella and basil.",
-        "price": 109,
-        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/dpventcrozvfni0lqb10",
+        "name": "Paneer Chilli",
+        "description": "Spicy and flavorful Indo-Chinese dish made with crispy paneer, capsicum, and tangy sauces.",
+        "price": 250,
+        "image": "https://howtomakerecipes.com/wp-content/uploads/2023/01/chilli-paneer-starter-recipe1.jpg",
         "isCustomizable": true,
         "isVeg": true,
         "customizationOptions": [
@@ -210,12 +210,12 @@ export const restaurantItemsData = [
     },
     {
         "id": "2",
-        "name": "Pepperoni Pizza",
-        "description": "Loaded with pepperoni slices and cheese.",
+        "name": "Special Biryani",
+        "description": "Aromatic rice layered with tender meat, fragrant spices, and rich flavors.",
         "price": 229,
-        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2024/9/19/e1e9ebad-6ef4-45d2-abf2-136048e5092e_05ab7e4a-ffa5-48c9-9c2e-8bd177206d55.jpeg",
+        "image": "https://t4.ftcdn.net/jpg/12/78/88/15/360_F_1278881550_NsK2UT9gKl0a0EZJCpCwuhsqkBcQlN0B.jpg",
         "isCustomizable": true,
-        "isVeg": false,
+        "isVeg": true,
         "customizationOptions": [
             {
                 "type": "Size",
@@ -238,12 +238,12 @@ export const restaurantItemsData = [
     },
     {
         "id": "3",
-        "name": "Butter Chicken Biryani",
-        "description": "Aromatic biryani with tender butter chicken.",
+        "name": "Panner Masala ",
+        "description": "Rich and creamy curry with soft paneer cubes and flavorful spices",
         "price": 250,
-        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/b461d252b9bfa267e5faa89a5284853f",
+        "image": "https://carameltintedlife.com/wp-content/uploads/2020/02/Instant-Pot-Paneer-Tikka-Masala-18.jpg",
         "isCustomizable": true,
-        "isVeg": false,
+        "isVeg": true,
         "customizationOptions": [
             {
                 "type": "Spice Level",
